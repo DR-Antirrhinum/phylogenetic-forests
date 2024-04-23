@@ -74,7 +74,18 @@ graph LR;
 
     source samtools-1.7
 
-    samtools mpileup 
+    ref=Am_2019.fasta 
+
+    # -q and -Q are read and mapping qualities
+    # -t DP to output per-sample read depth
+    # -B to disable probabilistic realignment for the computation of base alignment quality (Phred-scaled probability of a read base being misaligned)
+    # -A to count orphans (anomalous read pairs in variant calling) 
+    # use -r to specify a chromosome / scaffold and submit each separately.
+
+    inChr=$1
+
+    samtools mpileup  -q 40 -Q 30 -t DP -BA -f $ref -r ${inChr} Sample_1.bam Sample_2.bam Sample_n.bam > ${inChr}.pileup
+
 
 #### Convert Pileup to Popoolation2 SYNC file
 
@@ -82,7 +93,7 @@ See https://github.com/popgenvienna/popoolation2/blob/master/mpileup2sync.jar
 
     source jre-7.21
 
-    java mpileup2sync.jar
+    java -Xmx16g -jar mpileup2sync.jar --input ${inChr}.pileup --output ${inChr}.sync --min-qual 30 --threads 1
 
 The output SYNC file is used for treeXY analysis (https://github.com/DR-Antirrhinum/treeXY)
 
