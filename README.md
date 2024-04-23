@@ -76,7 +76,7 @@ graph LR;
 
     samtools mpileup 
 
-#### Convert Pileup to Popoolation SYNC file
+#### Convert Pileup to Popoolation2 SYNC file
 
 See https://github.com/popgenvienna/popoolation2/blob/master/mpileup2sync.jar
 
@@ -86,6 +86,6 @@ See https://github.com/popgenvienna/popoolation2/blob/master/mpileup2sync.jar
 
 The output SYNC file is used for treeXY analysis (https://github.com/DR-Antirrhinum/treeXY)
 
-## Generating d<sub>XY</sub> trees from treeXY output files
+## Generating genetic distance trees from treeXY output files
 
 
