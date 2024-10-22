@@ -1,5 +1,5 @@
 # phylogenetic-forests
-Various scripts used in the genomic analyses carried out in Richardson et. al (2024). 
+Various scripts used in the genomic analyses carried out in Richardson _et. al_ (2024). 
 
 ## Mapping and Pileup of samples
 The basic pipeline for preparing data for analysis is as follows:
@@ -111,7 +111,7 @@ First, run treeXY_whole_genome.py on the SYNC files of all the chromosomes you w
 
 ## Generate whole genome Maximum Likelihood tree from SYNC files
 
-First, run treeXY with _--write-sync_ enabled to generate treeXY_filtered SYNC files. Next, generate consensus FASTA files for each SYNC file using _consensus_from_sync.py_. Then, run _process.sh_ to generate a whole genome multi FASTA file for all taxa. This FASTA file can then serve as the input for your phylogenetic software of choice, such as RAxML-NG (Kozlov et al., 2019):
+First, run treeXY with _--write-sync_ enabled to generate treeXY_filtered SYNC files. Next, generate consensus FASTA files for each SYNC file using _consensus_from_sync.py_. Then, run _process.sh_ to generate a whole genome multi FASTA file for all taxa. This FASTA file can then serve as the input for your phylogenetic software of choice, such as RAxML-NG (Kozlov _et al._, 2019):
 
     raxml-ng --all --msa WG_treeXY_filtered.fa --model GTR+G --tree pars{10} --bs-trees 100
 
