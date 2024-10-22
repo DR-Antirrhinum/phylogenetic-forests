@@ -99,4 +99,26 @@ The output SYNC file is used for treeXY analysis (https://github.com/DR-Antirrhi
 
 ## Generating genetic distance trees from treeXY output files
 
+See grouping_tree_scan.R
 
+## Simulating a selective sweep on whole chromosome data
+
+See artificial_sweep.py
+
+## Generate whole genome trees with dXY and D
+
+First, run treeXY_whole_genome.py on the SYNC files of all the chromosomes you wish to analyse. Then, use WG_dXY_D_trees.R to read and generate mean dXY and D trees for the whole genome.
+
+## Generate whole genome Maximum Likelihood tree from SYNC files
+
+First, run treeXY with --write-sync enabled to generate treeXY_filtered SYNC files. Next, generate consensus FASTA files for each SYNC file using consensus_from_sync.py. Then, run process.sh to generate a whole genome multi FASTA file for all taxa. This FASTA file can then serve as the input for your phylogenetic software of choice, such as RAxML-NG (Kozlov et al., 2019):
+
+    raxml-ng --all --msa WG_treeXY_filtered.fa --model GTR+G --tree pars{10} --bs-trees 100
+
+## Calculating shortest root branch and the cophenetic correlation coefficient for hierarchical clustering trees
+
+See grouping_tree_scan.R
+
+## Grouping hierarchical clustering trees based on root division
+
+See grouping_tree_scan.R
