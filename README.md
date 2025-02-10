@@ -107,7 +107,7 @@ See _artificial_sweep.py_
 
 ## Generate whole genome trees with _d<sub>XY</sub>_ and _D_
 
-First, run treeXY_whole_genome.py on the SYNC files of all the chromosomes you wish to analyse. Then, use _WG_dXY_D_trees.R_ to read and generate mean _d<sub>XY</sub>_ and _D_ trees for the whole genome.
+First, download treeXY, and copy treeXY_mean.py into the same directory (treeXY_funcs.py is required to run). Then, run treeXY_mean.py on the SYNC files of all the chromosomes you wish to analyse. Finally, use _WG_dXY_D_trees.R_ to read and generate mean _d<sub>XY</sub>_ and _D_ trees for the whole genome.
 
 ## Generate whole genome Maximum Likelihood tree from SYNC files
 
