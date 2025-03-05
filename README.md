@@ -199,7 +199,7 @@ To merge results from different chromosomes, and generate a whole genome consens
 
 ## Calculating shortest root branch and the cophenetic correlation coefficient for hierarchical clustering trees
 
-Run _generate_dXY_trees.R_ in RStudio, and consult the cluster_summaries data frame.
+Run _generate_dXY_trees.R_ in RStudio, and consult the _cluster_summaries_ data frame.
 
 ## Grouping hierarchical clustering trees based on cophenetic grouping, or root division
 
