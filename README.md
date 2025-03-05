@@ -1,5 +1,5 @@
 # phylogenetic-forests
-Various scripts used in the genomic analyses carried out in Richardson _et. al_ (2025). 
+Various scripts used in the genomic analyses carried out in Richardson _et. al_ (preprint available at https://www.biorxiv.org/content/10.1101/2025.02.12.637406v1). 
 
 ```geojson 
 { "type": "FeatureCollection",
