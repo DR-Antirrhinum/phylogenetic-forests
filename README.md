@@ -1,6 +1,86 @@
 # phylogenetic-forests
 Various scripts used in the genomic analyses carried out in Richardson _et. al_ (2025). 
 
+```geojson 
+{ "type": "FeatureCollection",
+    "features": [
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [1.772739, 42.763361]},
+        "properties": {"population_name": "UNA"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [1.568953, 42.869186]},
+        "properties": {"population_name": "BED"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.260464, 42.968486]},
+        "properties": {"population_name": "LU"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.2231055, 42.798143]},
+        "properties": {"population_name": "AXA"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.039864, 42.725164]},
+        "properties": {"population_name": "MIJ"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.122297, 42.507878]},
+        "properties": {"population_name": "MON"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.8552415, 42.467675]},
+        "properties": {"population_name": "PER"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.58705, 42.643378]},
+        "properties": {"population_name": "BOU"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.367453, 42.587006]},
+        "properties": {"population_name": "VIL"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.4876195, 42.3895975]},
+        "properties": {"population_name": "ARS"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.721694, 42.644139]},
+        "properties": {"population_name": "THU"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [3.124183, 42.489458]},
+        "properties": {"population_name": "BAN"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.6084845, 42.4479485]},
+        "properties": {"population_name": "ARL"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [1.533579, 43.311569]},
+        "properties": {"population_name": "CIN"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.052929, 42.326943]},
+        "properties": {"population_name": "YP1"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [1.926958, 42.359921]},
+        "properties": {"population_name": "YP4"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.091375, 42.322234]},
+        "properties": {"population_name": "MP4"}
+      },
+      { "type": "Feature",
+        "geometry": {"type": "Point", "coordinates": [2.170284, 42.331038]},
+        "properties": {"population_name": "MP11"}
+      }
+   ]
+}
+```
+18 geographically dispersed populations of _Antirrhinum majus majus var. pseudomajus_ and _A. m. m. var. striatum_ were sampled, sequenced, and mapped to the *Antirrhinum majus* reference genome V3 (https://ngdc.cncb.ac.cn/gwh/Assembly/25982/show). Pool-seq data will soon be available from SRA, under BioProject PRJNA1232105.
+
 ## Mapping and Pileup of samples
 The basic pipeline for preparing data for analysis is as follows:
 
