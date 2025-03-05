@@ -150,7 +150,7 @@ graph LR;
 
     samtools index ${AlignmentsDir}/${outfile}.bwa.sorted.rmdup.realign.bam
 
-### Create Pileup of BAM files
+### Create Pileup of BAM files for one chromosome / scaffold
 
     source samtools-1.7
 
@@ -191,7 +191,9 @@ First, download treeXY, and copy treeXY_mean.py into the same directory (treeXY_
 
 ## Generate whole genome Maximum Likelihood tree from SYNC files
 
-First, run treeXY with _--write-sync_ enabled to generate treeXY_filtered SYNC files. Next, generate consensus FASTA files for each SYNC file using _consensus_from_sync.py_. Then, run the commands from _process.sh_ to generate a whole genome multi FASTA file for all taxa. This FASTA file can then serve as the input for your phylogenetic software of choice, such as RAxML-NG (Kozlov _et al._, 2019):
+First, run treeXY with _--write-sync_ enabled to generate treeXY_filtered SYNC files. Next, generate consensus FASTA files for each SYNC file using _consensus_from_sync.py_. Each consensus FASTA file will contain one sequence for each taxon in the SYNC file.
+
+To merge results from different chromosomes, and generate a whole genome consensus FASTA file, you can use _paste_ from the command line. It's also useful to use _fold_ to spread the merged FASTA sequence across multiple rows, and _sed -i_ to edit labels. The resultant whole genome FASTA file can then serve as the input for your phylogenetic software of choice, such as RAxML-NG (Kozlov _et al._, 2019):
 
     raxml-ng --all --msa WG_treeXY_filtered.fa --model GTR+G --tree pars{10} --bs-trees 100
 
