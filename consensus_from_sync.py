@@ -67,7 +67,7 @@ with open(args.file) as f:
 		# here, I ignore Ns
 		count_list = get_sync_counts(site_counts)
 
-		sync_key = ["A", "T", "C", "G", "del"]
+		sync_key = ["A", "T", "C", "G", "-"]
 
 		for i, count in enumerate(count_list):
 			m = max(count)
