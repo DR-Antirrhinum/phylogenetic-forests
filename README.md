@@ -179,7 +179,7 @@ The output SYNC file is used for treeXY analysis (https://github.com/DR-Antirrhi
 
 ## Generating genetic distance trees from treeXY output files
 
-See _grouping_tree_scan.R_
+Run _generate_dXY_trees.R_ in RStudio to populate a list of UPGMA genetic distance trees from treeXY results.
 
 ## Simulating a selective sweep on whole chromosome data
 
@@ -199,8 +199,8 @@ To merge results from different chromosomes, and generate a whole genome consens
 
 ## Calculating shortest root branch and the cophenetic correlation coefficient for hierarchical clustering trees
 
-See _grouping_tree_scan.R_
+Run _generate_dXY_trees.R_ in RStudio, and consult the cluster_summaries data frame.
 
-## Grouping hierarchical clustering trees based on root division
+## Grouping hierarchical clustering trees based on cophenetic grouping, or root division
 
-See _grouping_tree_scan.R_
+Having run _generate_dXY_trees.R_ in an RStudio session, run commands in _grouping_tree_scan.R_ to carry out grouping tree scans.
